@@ -1,0 +1,38 @@
+---
+description: Enforce clean code, naming, documentation, and project standards
+globs:
+  - "*.ps1"
+  - "*.py"
+  - "README.md"
+alwaysApply: true
+---
+
+# Clean Code and Project Standards
+
+## Naming Conventions
+1. **Variables**: camelCase (avoid single-character names except standard iterators like `i`, `j`).
+2. **Functions & Scripts**: Verb-Noun in PascalCase.
+
+## Syntax & Characters
+1. **ASCII Only**: No emojis, special Unicode characters, or “smart” quotes; normalize curly quotes to straight quotes.
+2. **No Unnecessary Functions**: Do not generate functions unless needed.
+
+## Error Handling
+1. **try/catch**: Mandatory `try/catch` blocks with proper logging or rethrowing.
+
+## Python Files (`*.py`)
+1. **Virtual Environments**: Always use a venv.
+2. **requirements.txt**: Create and keep updated.
+
+## README (`README.md`)
+1. **Sections**: No acknowledgement or support sections.
+2. **ASCII Only**: No emojis, special Unicode characters.
+3. **Up-to-Date**: Ensure README is current before pushes.
+
+## Tests & Temp Files
+1. Place test files and all temporary files under `tests/`.
+2. Add `tests/` to `.gitignore`.
+
+## Automated Enhancements
+1. Do not create a new “enhanced” file if one already exists.
+2. If enhancement runs after testing, merge into existing file and delete temporary.
