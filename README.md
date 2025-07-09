@@ -19,33 +19,33 @@ GLS provides a simple and efficient way to create, manage, and resolve short int
 
 ```mermaid
 graph TD
-  A[Browser] --> B[CloudFront]
-  B --> C[S3 (Static Frontend)]
-  B --> D[ALB (Load Balancer)]
-  D --> E[FastAPI API (ECS)]
-  E --> F[PostgreSQL (RDS)]
-  E --> G[Redis (Elasticache)]
-  E --> H[CloudWatch Logs]
-  
-  subgraph "Frontend"
-    I[React + TypeScript]
-    J[Tailwind CSS]
-    K[Authentication UI]
-  end
-  
-  subgraph "Backend"
-    L[FastAPI]
-    M[SQLAlchemy]
-    N[Alembic Migrations]
-    O[JWT Auth]
-    P[Rate Limiting]
-  end
-  
-  subgraph "Infrastructure"
-    Q[Docker Compose]
-    R[GitHub Actions CI/CD]
-    S[AWS ECS Fargate]
-  end
+    A[Browser] --> B[CloudFront]
+    B --> C[S3 Static Frontend]
+    B --> D[ALB Load Balancer]
+    D --> E[FastAPI API ECS]
+    E --> F[PostgreSQL RDS]
+    E --> G[Redis Elasticache]
+    E --> H[CloudWatch Logs]
+    
+    subgraph Frontend
+        I[React + TypeScript]
+        J[Tailwind CSS]
+        K[Authentication UI]
+    end
+    
+    subgraph Backend
+        L[FastAPI]
+        M[SQLAlchemy]
+        N[Alembic Migrations]
+        O[JWT Auth]
+        P[Rate Limiting]
+    end
+    
+    subgraph Infrastructure
+        Q[Docker Compose]
+        R[GitHub Actions CI/CD]
+        S[AWS ECS Fargate]
+    end
 ```
 
 ## Quick Start
