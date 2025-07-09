@@ -60,7 +60,7 @@ graph TD
 
 1. **Clone and setup**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/amar-r/GLS.git
    cd GLS
    ```
 
